@@ -7,6 +7,7 @@
 
     <ItemGroup>
         <None Update="app.db" CopyToOutputDirectory="PreserveNewest" />
+        <None Remove="data access\**" />
     </ItemGroup>
 
     <ItemGroup>
@@ -20,6 +21,15 @@
     <ItemGroup>
       <Content Remove="Views\Shared\_CookieConsentPartial.cshtml" />
       <Content Remove="Views\SpendingTracker\SpendingTracker.cshtml" />
+      <Content Remove="data access\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="data access\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="data access\**" />
     </ItemGroup>
 
 </Project>
