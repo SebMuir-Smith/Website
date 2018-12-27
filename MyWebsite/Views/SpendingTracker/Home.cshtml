@@ -1,0 +1,33 @@
+﻿@model MyWebsite.Models.SpenderStatModel
+
+@{
+    ViewBag.Title = "Home";
+}
+
+<h2>Home</h2>
+
+<div>
+    <h4>SpenderStatModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nickname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nickname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalSpending)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalSpending)
+        </dd>
+
+    </dl>
+</div>
+<p>|
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,162 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
+for details on configuring this project to bundle and minify static web assets. */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+.photo-holder {
+    width: auto;
+    height: 150px;
+    background-color: #222222;
+    margin: 0;
+    position: relative;
+    z-index:1;
+}
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+h5{
+    margin: 0 auto;
+}
+
+h3.resume{
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+div.resume{
+    margin: 40px auto;
+    border: 1px solid grey;
+    z-index: 3;
+    position:relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.resume .resume{
+    border: 0;
+    z-index: 2;
+    position: relative;
+    margin: 0;
+    border-radius: 0;
+}
+
+
+.resume button{
+    color: black;
+    margin: 0 auto;
+    width: 50%;
+    border: 0;
+    float: left;
+    height: 46px;
+    z-index: 1;
+    position: relative;
+    background-color: white;
+}
+
+.resume button:hover{
+    background-color: grey;
+    transition-duration: 1s;
+}
+
+.resume button:active{
+    border: 0;
+}
+
+
+h5 {
+    font-size: 40px;
+    text-align: center;
+}
+
+div.profile-photo {
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    border: 0 solid black;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50px;
+    z-index: 3;
+    display: inline-block;
+    left: calc(50% - 100px);
+}
+
+.profile-outer {
+    height: 250px;
+    width: 250px;
+    border-radius: 100%;
+    border: 0 solid black;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 25px;
+    z-index: 2;
+    display: inline-block;
+    left: calc(50% - 125px);
+    background-color: white;
+}
+
+
+.profile-photo img{
+    max-height: 125%;
+    max-width: 200%;
+    object-position: center;
+    object-fit:contain;
+    z-index: 4;
+    position:relative;
+    right: 75px;
+
+}
+
+#body-content{
+    margin-top:130px;
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+

@@ -1,0 +1,30 @@
+﻿@model MyWebsite.Models.LoginRedirectModel
+
+@{
+    ViewBag.Title = "My Projects";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@if (Model.Redirected)
+{
+    <h2 class="error">Error: Please log in before accessing any web apps</h2>
+}
+
+@if (User.Identity.IsAuthenticated)
+{
+<div class="grid-container">
+    <div class="h3">     
+        @Html.ActionLink("Project 1: Spendings Tracker", "Index", "SpendingTracker")
+    </div>
+    <div class="h3">
+        //Html.ActionLink("Project 2: Daily Job Analytics Visualiser", "Scraper", "Apps")
+    </div>
+    @Html.Partial("_LoginPartial")
+</div>
+}
+else
+{
+    <h2>Please log in via the buttons below before accessing my webapp projects</h2>
+    @Html.Partial("_LoginPartial")
+}
