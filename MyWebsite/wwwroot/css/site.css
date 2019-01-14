@@ -160,3 +160,13 @@ div.profile-photo {
     color: green;
 }
 
+#scraperbar {
+    background-color: #8a6d3b;
+    color: #e3e3e3;
+    border: 0;
+}
+
+#homebar {
+    border: 0;
+}
+
