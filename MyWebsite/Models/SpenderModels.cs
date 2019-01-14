@@ -91,7 +91,7 @@ namespace MyWebsite.Models
 
     public class SpenderStatModel
     {
-        List<CategoryStatistic> CategoryStats { get; set; }
+        public List<CategoryStatistic> CategoryStats { get; set; }
 
         public string Nickname { get; set; }
 
