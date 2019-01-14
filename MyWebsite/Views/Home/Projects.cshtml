@@ -20,11 +20,11 @@
     <div class="h3">
         //Html.ActionLink("Project 2: Daily Job Analytics Visualiser", "Scraper", "Apps")
     </div>
-    @Html.Partial("_LoginPartial")
+    @Html.PartialAsync("_LoginPartial")
 </div>
 }
 else
 {
     <h2>Please log in via the buttons below before accessing my webapp projects</h2>
-    @Html.Partial("_LoginPartial")
+    @Html.PartialAsync("_LoginPartial")
 }
