@@ -170,3 +170,7 @@ div.profile-photo {
     border: 0;
 }
 
+.col-md-3{
+    visibility: hidden;
+}
+
