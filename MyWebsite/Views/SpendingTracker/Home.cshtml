@@ -4,38 +4,44 @@
     ViewBag.Title = "Home";
 }
 
-<h2>Home</h2>
+<h2>@Html.DisplayFor(model => model.Nickname), here's your spending breakdown:</h2>
 
-<div>
-    <h4>SpenderStatModel</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Nickname)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Nickname)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.TotalSpending)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.TotalSpending)
-        </dd>
-        
+<div class="main-grid">
+    <div class="quick-stats">
+        <p>Total Spending: $@Html.DisplayFor(Model => Model.TotalSpending)</p>
+    </div>
+    <div class="weekly-breakdown column">
         @foreach (CategoryStatistic category in Model.CategoryStats)
         {
-            foreach (var item in category.GetType().GetProperties())
-            {
-                <label>@Html.Encode(item.Name);</label>
-                <label>@Html.Encode(item.GetValue(category));</label>
-            }
-
+            <div class="category-container">
+                <div class="cat-label">Category Name:</div>
+                <div class="cat-data">@Html.Encode(category.CategoryName)</div>
+                <br/>
+                <div class="cat-label">Weekly Spending:</div>
+                <div class="cat-data">@Html.Encode(category.WeeklyAbsolute)</div>
+                <br/>
+                <div class="cat-label">Weekly Percentage:</div>
+                <div class="cat-data">@Html.Encode(category.WeeklyPercentage)</div>
+            </div>
         }
-
-    </dl>
+    </div>
+    <div class="all-time column">
+        @foreach (CategoryStatistic category in Model.CategoryStats)
+        {
+            <div class="category-container">
+                <div class="cat-label">Category Name:</div>
+                <div class="cat-data">@Html.Encode(category.CategoryName)</div>
+                <br/>
+                <div class="cat-label">Total Spending:</div>
+                <div class="cat-data">@Html.Encode(category.TotalAbsolute)</div>
+                <br/>
+                <div class="cat-label">Total Percentage:</div>
+                <div class="cat-data">@Html.Encode(category.TotalPercentage)</div>
+            </div>
+        }
+    </div>
 </div>
+
+
 

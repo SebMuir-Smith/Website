@@ -145,12 +145,14 @@ namespace MyWebsite.Scripts
         [ValidateAntiForgeryToken]
         public ActionResult AddSpendingCategory(SpendingCategoryModel model)
         {
+            // Is the category a new category
+            bool unique = true;
+            
             if (ModelState.IsValid)
             {
                 List<string> categories = GetCategories(GetIdUsingName(User.Identity.Name));
 
-                // Is the category a new category
-                bool unique = true;
+                
                 foreach (string category in categories)
                 {
                     if (category == model.Category)
@@ -164,10 +166,20 @@ namespace MyWebsite.Scripts
                     model.Id = GetIdUsingName(User.Identity.Name);
                     AddCategory(model);
                 }
-
+                
                 ViewBag.Unique = unique;
                 ViewBag.Success = unique;
+
             }
+            else
+            {
+                // Don't raise any flags and let normal error reporting take over
+                ViewBag.Unique = true;
+                ViewBag.Success = false;
+            }
+            
+            
+            
 
             return View();
         }

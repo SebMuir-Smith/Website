@@ -174,3 +174,30 @@ div.profile-photo {
     visibility: hidden;
 }
 
+/* Spending tracker presentation */
+.main-grid {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr;
+    grid-column-gap: 1%;
+}
+
+.category-container {
+    border: #5e5e5e solid 2px;
+    border-radius: 10px;
+    padding: 2%;
+}
+
+.cat-label {
+    justify-content: left;
+    display: inline-block;
+}
+
+.cat-data {
+    float: right;
+    display: inline-block;
+}
+
+.column {
+    display: grid;
+    grid-row-gap: 5px;
+}
