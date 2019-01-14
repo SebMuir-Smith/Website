@@ -1,4 +1,5 @@
-﻿@model MyWebsite.Models.SpenderStatModel
+﻿@using System.Web
+@model MyWebsite.Models.SpenderStatModel
 
 @{
     ViewBag.Title = "Home";
@@ -16,13 +17,13 @@
         {
             <div class="category-container">
                 <div class="cat-label">Category Name:</div>
-                <div class="cat-data">@Html.Encode(category.CategoryName)</div>
+                <div class="cat-data">@HttpUtility.HtmlDecode(category.CategoryName)</div>
                 <br/>
                 <div class="cat-label">Weekly Spending:</div>
-                <div class="cat-data">@Html.Encode(category.WeeklyAbsolute)</div>
+                <div class="cat-data">category.WeeklyAbsolute</div>
                 <br/>
                 <div class="cat-label">Weekly Percentage:</div>
-                <div class="cat-data">@Html.Encode(category.WeeklyPercentage)</div>
+                <div class="cat-data">category.WeeklyPercentage</div>
             </div>
         }
     </div>
@@ -31,13 +32,13 @@
         {
             <div class="category-container">
                 <div class="cat-label">Category Name:</div>
-                <div class="cat-data">@Html.Encode(category.CategoryName)</div>
+                <div class="cat-data"> @HttpUtility.HtmlDecode(category.CategoryName)</div>
                 <br/>
                 <div class="cat-label">Total Spending:</div>
-                <div class="cat-data">@Html.Encode(category.TotalAbsolute)</div>
+                <div class="cat-data">category.TotalAbsolute</div>
                 <br/>
                 <div class="cat-label">Total Percentage:</div>
-                <div class="cat-data">@Html.Encode(category.TotalPercentage)</div>
+                <div class="cat-data">category.TotalPercentage</div>
             </div>
         }
     </div>
