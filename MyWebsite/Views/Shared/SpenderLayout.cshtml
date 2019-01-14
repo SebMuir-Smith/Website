@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - MyWebsite</title>
+    <title>Spending Tracker</title>
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -30,10 +30,9 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Rèsumè", "Resume", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Projects", "Projects", "Home")</li>
+                    <li>@Html.ActionLink("Home", "Home", "SpendingTracker")</li>
+                    <li>@Html.ActionLink("Add Spending", "AddSpending", "SpendingTracker")</li>
+                    <li>@Html.ActionLink("Add Categories", "AddSpendingCategory", "SpendingTracker")</li>
                 </ul>
                 <partial name="_LoginPartial" />
             </div>
