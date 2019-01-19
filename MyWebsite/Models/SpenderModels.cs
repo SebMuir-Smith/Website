@@ -124,11 +124,11 @@ namespace MyWebsite.Models
     {
         public string CategoryName { get; set; }
 
-        public double WeeklyPercentage { get; set; }
+        public string WeeklyPercentage { get; set; }
 
         public double WeeklyAbsolute { get; set; }
 
-        public double TotalPercentage { get; set; }
+        public string TotalPercentage { get; set; }
 
         public double TotalAbsolute { get; set; }
 

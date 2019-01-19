@@ -20,10 +20,10 @@
                 <div class="cat-data">@HttpUtility.HtmlDecode(category.CategoryName)</div>
                 <br/>
                 <div class="cat-label">Weekly Spending:</div>
-                <div class="cat-data">category.WeeklyAbsolute</div>
+                <div class="cat-data">$@category.WeeklyAbsolute</div>
                 <br/>
                 <div class="cat-label">Weekly Percentage:</div>
-                <div class="cat-data">category.WeeklyPercentage</div>
+                <div class="cat-data">@category.WeeklyPercentage</div>
             </div>
         }
     </div>
@@ -35,10 +35,10 @@
                 <div class="cat-data"> @HttpUtility.HtmlDecode(category.CategoryName)</div>
                 <br/>
                 <div class="cat-label">Total Spending:</div>
-                <div class="cat-data">category.TotalAbsolute</div>
+                <div class="cat-data">$@category.TotalAbsolute</div>
                 <br/>
                 <div class="cat-label">Total Percentage:</div>
-                <div class="cat-data">category.TotalPercentage</div>
+                <div class="cat-data">@category.TotalPercentage</div>
             </div>
         }
     </div>

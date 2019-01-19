@@ -168,8 +168,8 @@ namespace MyWebsite.BusinessLogic
 
                 statistic.TotalAbsolute = categoryTotal;
                 statistic.WeeklyAbsolute = weeklyCategoryTotal;
-                statistic.TotalPercentage = categoryTotal / alltimeTotal;
-                statistic.WeeklyPercentage = weeklyCategoryTotal / lastWeekTotal;
+                statistic.TotalPercentage = GetPercentage(categoryTotal / alltimeTotal * 100);
+                statistic.WeeklyPercentage =  GetPercentage(weeklyCategoryTotal / lastWeekTotal * 100);
                 
                 categoryStatistics.Add(statistic);
 
@@ -177,6 +177,24 @@ namespace MyWebsite.BusinessLogic
 
 
             return categoryStatistics;
+        }
+
+        private static string GetPercentage(double num)
+        {
+            string[] splitString = num.ToString().Split('.');
+
+            string result;
+
+            if (splitString.Length == 2)
+            {
+                result = splitString[0] +  "." + splitString[1].Substring(0, 2) + "%";
+            }
+            else
+            {
+                result = splitString[0] + "%";
+            }
+
+            return result;
         }
     }
 }
