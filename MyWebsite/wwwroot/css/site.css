@@ -36,6 +36,7 @@ body {
     }
 }
 
+/* Homepage formatting */
 .photo-holder {
     width: auto;
     height: 150px;
@@ -45,57 +46,6 @@ body {
     z-index:1;
 }
 
-body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-}
-
-h5{
-    margin: 0 auto;
-}
-
-h3.resume{
-    text-align: center;
-    font-size: 50px;
-    font-weight: bold;
-}
-
-
-.resume .resume{
-    border: 0;
-    z-index: 2;
-    position: relative;
-    margin: 0;
-    border-radius: 0;
-}
-
-
-.resume button{
-    color: black;
-    margin: 0 auto;
-    width: 50%;
-    border: 0;
-    float: left;
-    height: 46px;
-    z-index: 1;
-    position: relative;
-    background-color: white;
-}
-
-.resume button:hover{
-    background-color: grey;
-    transition-duration: 1s;
-}
-
-.resume button:active{
-    border: 0;
-}
-
-
-h5 {
-    font-size: 40px;
-    text-align: center;
-}
 
 div.profile-photo {
     height: 200px;
@@ -140,6 +90,12 @@ div.profile-photo {
 
 }
 
+.homepage {
+    text-align: center;
+}
+
+/* general stuff */
+
 #body-content{
     margin-top:130px;
 }
@@ -153,7 +109,7 @@ div.profile-photo {
 }
 
 #scraperbar {
-    background-color: #8a6d3b;
+    background-color: saddlebrown;
     color: #e3e3e3;
     border: 0;
 }
@@ -174,7 +130,7 @@ div.profile-photo {
 }
 
 .category-container {
-    border: #5e5e5e solid 2px;
+    border: saddlebrown solid 2px;
     border-radius: 10px;
     padding: 2%;
 }
@@ -194,7 +150,7 @@ div.profile-photo {
     grid-row-gap: 5px;
 }
 
-/* resume presentation */
+/* resume popup */
 .question {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -237,4 +193,63 @@ div.profile-photo {
     top: 0;
     left: 0;
     opacity: 50%;
+    
+}
+
+/* resume contents  */
+.resume-container {
+    margin: 0 150px;
+    min-width: 700px;
+    max-width: 800px;
+}
+
+.title-container h1 {
+    text-align: center;
+    font-family: Ayuthaya, sans-serif;
+    color: saddlebrown;
+}
+
+.separator {
+    background-color: black;
+    height: 3px;
+    width: 25%;
+    margin: auto;
+}
+
+.subtitle {
+    margin: 10px auto auto auto;
+    text-align: center;
+}
+
+.subtitle .info {
+    display: inline;
+    
+}
+
+.sep {
+    height: 10px;
+    width: 2px;
+    background-color: black;
+    display: inline-block;
+    margin: 0 2px;
+}
+
+.title {
+    font-family: Seravek, serif;
+    font-size: 30px;
+    color: saddlebrown;
+    margin: 10px 0 0 0;
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    display: inline-block;
+    margin: 0 0 10px 0;
+}
+
+.subtext {
+    margin: 0 0 10px 35px;
+    line-height: 135%;
 }

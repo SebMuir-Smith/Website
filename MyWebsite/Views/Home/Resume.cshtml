@@ -1,37 +1,45 @@
-﻿<div class="popup">
+﻿<div class="popup", id="popup">
     <div class="question">
         <h1> What resume did you want to view?</h1>
-        <button class="b1">1</button>
-        <button class="b2">2</button>
+        <button onclick="DisplayResume('R2');" class="b1">Hospitality/Bartending</button>
+        <button  onclick="DisplayResume('R1');" class="b2">Web Dev/Data Analytics</button>
     </div>
 </div>
 
-<div class="resume-container r1">
+<div class="resume-container", id="R1">
     <div class="title-container">
         <h1>Sebastian Muir-Smith</h1>
         <div class="separator"></div>
         <div class="subtitle">
             <div class="info">Gold Coast, Queensland, 4211</div>
+            <span class="sep"></span>
             <div class="info">0468760871</div>
+            <span class="sep"></span>
             <div class="info">sebastian@muirsmith.com</div>
+            <span class="sep"></span>
             <div class="info">www.sebastian.muirsmith.com</div>
         </div>
     </div>
     <div class="title">Professional Summary</div>
+    <span class="line"></span>
     <div class="subtext">Local student with over two years bartending experience, seeking casual and part time employment
         in bartending and related work</div>
+    
     <div class="title">Education</div>
+    <span class="line"></span>
     <div class="subtext"><b>St Michael's College, Merrimac</b><br/>
         Graduated OP1/ATAR 99.65 equivalent, November 2017</div>
     <div class="subtext"><b>Queensland University of Technology, Gardens Point</b><br/>
-        Bachelor of Mathematics <em>(Statistics)</em>,Bachelor of Information Technology <em>(Computer Science)</em>, GPA 6.87 <br/>
+        Bachelor of Mathematics <em>(Statistics)</em>, Bachelor of Information Technology <em>(Computer Science)</em>, GPA 6.87 <br/>
         February 2017 - November 2021</div>
+    
     <div class="title">Work Experience</div>
+    <span class="line"></span>
     <div class="subtext"><b>Hungry Jack's</b><br/>
         Crew member, December 2015 - April 2016 <br/>
         Left to focus on studies</div>
     <div class="subtext"><b>O'brien Group</b><br/>
-        Bartender; Cashier; Bar Supervisor, February 2017 - Present<br/>
+        Bartender; Bar Cashier; Bar Supervisor, February 2017 - Present<br/>
         General Bar and Cashier work, including serving beer, wine and spirits to customers<br/>
         Customer involvement and critical thinking to maintain RSA<br/>
         Participated in managerial roles such as managing employees and stock for a bar
@@ -49,12 +57,14 @@
         Served drinks, managed tabs and stock, maintained RSA in high-risk environments (unlimited drink packages) and maintained my bar to a high standard<br/>
         Also participated in occasional waiting and event setup shifts, diversifying my skillset considerably<br/>
     </div>
+    
     <div class="title">Qualifications</div>
+    <span class="line"></span>
     <div class="subtext">Hold current RSA, willing to obtain RSG or other certifications</div>
     
 </div>
 
-<div class="resume-container r2">
+<div class="resume-container", id="R2">
     <div class="title-container">
         <h1>Sebastian Muir-Smith</h1>
         <div class="separator"></div>
@@ -71,3 +81,11 @@
     <div class="title">Work Experience</div>
     <div class="title">Qualifications</div>
 </div>
+
+<script type="text/javascript">
+    function DisplayResume(type) {
+        document.getElementById(type).style.cssText = 'display: none;';
+        document.getElementById('popup').style.cssText = 'display: none;';      
+    }
+    
+</script>
