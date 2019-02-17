@@ -253,3 +253,23 @@ div.profile-photo {
     margin: 0 0 10px 35px;
     line-height: 135%;
 }
+
+/* Css for project page */
+
+.project-container {
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: fit-content;
+    row-gap: 20px;
+}
+
+.project {
+    padding: 50px 50%;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    white-space: nowrap;
+    
+}

@@ -1,10 +1,6 @@
 ﻿@model MyWebsite.Models.LoginRedirectModel
 
-@{
-    ViewBag.Title = "My Projects";
-}
 
-<h2>@ViewBag.Title</h2>
 
 @if (Model.Redirected)
 {
@@ -13,14 +9,11 @@
 
 @if (User.Identity.IsAuthenticated)
 {
-<div class="grid-container">
-    <div class="h3">     
-        @Html.ActionLink("Project 1: Spendings Tracker", "Index", "SpendingTracker")
+    <div class="project-container">
+        <div class="project p1">Project 0: This website</div>
+        <div class="project p2">Project 1: Spending tracker web app</div>
+        <div class="project p3">Project 2: idk man</div>
     </div>
-    <div class="h3">
-        //Html.ActionLink("Project 2: Daily Job Analytics Visualiser", "Scraper", "Apps")
-    </div>
-</div>
 }
 else
 {
