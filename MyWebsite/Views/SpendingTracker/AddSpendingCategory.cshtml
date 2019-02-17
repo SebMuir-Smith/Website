@@ -6,7 +6,10 @@
 
 <h2>AddSpendingCategory</h2>
 
-
+@if (!ViewBag.hasCategories)
+{
+    <p class="error">Please create at least one category before adding a spending record.</p>
+}
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()

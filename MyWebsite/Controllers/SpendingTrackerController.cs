@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Primitives;
 using MyWebsite.Models;
 
 using MyWebsite.Controllers;
@@ -98,6 +99,12 @@ namespace MyWebsite.Scripts
                 return RedirectToAction("Index", "SpendingTracker");
             }
 
+            if (!SpenderHasACategory(id))
+            {
+                return RedirectToAction("AddSpendingCategory", "SpendingTracker",
+                    new {hasCategories = false});
+            }
+
             ViewBag.SpendingCategories = GetCategories(GetIdUsingName(User.Identity.Name));
 
             ViewBag.Success = success;
@@ -137,6 +144,15 @@ namespace MyWebsite.Scripts
 
             ViewBag.Unique = true;
             ViewBag.Success = success;
+            
+            // Attempting to see if a url parameter was passed
+            ViewBag.hasCategories = true;
+            StringValues requestVar;
+            // If the url parameter exists
+            if (Request.Query.TryGetValue("hasCategories", out requestVar))
+            {
+                ViewBag.hasCategories = bool.Parse(requestVar.ToString());
+            }
 
             return View();
         }
@@ -169,6 +185,9 @@ namespace MyWebsite.Scripts
                 
                 ViewBag.Unique = unique;
                 ViewBag.Success = unique;
+
+                ViewBag.hasCategories = true;
+
 
             }
             else

@@ -196,5 +196,10 @@ namespace MyWebsite.BusinessLogic
 
             return result;
         }
+
+        internal static bool SpenderHasACategory(string id)
+        {
+            return GetCategories(id).Count != 0;
+        }
     }
 }
